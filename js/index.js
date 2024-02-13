@@ -1,7 +1,6 @@
 'use strict';
 /*
-
-//====================Взаимодействие с пользователями
+//====================Взаимодействие с пользователями======================
 
 const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
@@ -17,14 +16,21 @@ const personalMovieDB = {
    privat: false,
 };
 
-const nameLastFilm = prompt('Один из последних просмотренных фильмов?', '');
-const ratingLastFilm = prompt('Один из последних просмотренных фильмов?', '');
-personalMovieDB.movies[nameLastFilm] = ratingLastFilm;
+for (let i = 0; i < 2; i++) {
+   const nameLastFilm = prompt('Один из последних просмотренных фильмов?', '');
+   const ratingLastFilm = prompt('На сколько оцените его?', '');
+   if (nameLastFilm != null && ratingLastFilm != null && nameLastFilm != '' && ratingLastFilm != '' && nameLastFilm.length < 50) {
+      personalMovieDB.movies[nameLastFilm] = ratingLastFilm;
+   } else {
+      i--;
+   }
+}
+
 console.log(personalMovieDB);
 */
 
-//==========================Циклы
-//==================Треугольник
+//==========================Циклы========================
+//==================Треугольник==========================
 /*
 let resultOut = '';
 const lenghtStr = 7;
