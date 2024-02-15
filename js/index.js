@@ -155,3 +155,28 @@ for (let i = 0; i <= lines; i++) {
 
 console.log(result);
 */
+/*
+function sayHello(name) {
+   return `Привет, ${name}`;
+}
+
+function returnNeighboringNumbers(num) {
+   return [num - 1, num, num + 1];
+}
+
+function getMathResult(base, rep) {
+   if (rep <= 0 || typeof (rep) != 'number') {
+      return base;
+   } else {
+      let str = '';
+      for (let i = 1; i <= rep; i++) {
+         if (i === rep) {
+            str += `${base * i}`;
+         } else {
+            str += `${base * i}---`;
+         }
+      }
+      return str;
+   }
+}
+*/
