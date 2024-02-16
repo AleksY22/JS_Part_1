@@ -44,8 +44,7 @@ function showMyDB(filmDataBase) {
 
 function writeYourGenres(filmDataBase) {
    for (let i = 1; i <= 3; i++) {
-      const genreOfFilm = prompt(`Ваш любимый жанр под номером ${i}`);
-      filmDataBase.genres[i - 1] = genreOfFilm;
+      filmDataBase.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
    }
 }
 
