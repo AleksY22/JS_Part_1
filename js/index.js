@@ -1,7 +1,7 @@
 'use strict';
 
 //====================Взаимодействие с пользователями======================
-
+/*
 let numberOfFilms;
 
 const personalMovieDB = {
@@ -55,7 +55,7 @@ rememberMyFilms();
 showMyDB(personalMovieDB);
 
 writeYourGenres(personalMovieDB);
-
+*/
 
 //==========================Циклы========================
 //==================Треугольник==========================
@@ -207,4 +207,33 @@ function getMathResult(base, rep) {
       return str;
    }
 }
+*/
+/*
+function calculateVolumeAndArea(lengthSide) {
+   if (typeof (lengthSide) !== 'number' || !Number.isInteger(lengthSide) || lengthSide < 0) {
+      return 'При вычислении произошла ошибка';
+   }
+   let v = 0;
+   v = lengthSide * lengthSide * lengthSide;
+   let s = 0;
+   s = (lengthSide * lengthSide) * 6;
+   return `Объем куба: ${v}, площадь всей поверхности: ${s}`;
+}
+
+console.log(calculateVolumeAndArea(-5));
+
+function getCoupeNumber(numberPlace) {
+   if (typeof (numberPlace) !== 'number' || !Number.isInteger(numberPlace) || numberPlace < 0) {
+      return 'Ошибка. Проверьте правильность введенного номера места';
+
+   }
+
+   if (numberPlace === 0 || numberPlace > 36) {
+      return 'Таких мест в вагоне не существует';
+   }
+
+   return Math.ceil(numberPlace / 4);
+}
+
+console.log(getCoupeNumber(7.7));
 */
