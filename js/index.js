@@ -1,8 +1,8 @@
 'use strict';
-/*
+
 //====================Взаимодействие с пользователями======================
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+let numberOfFilms;
 
 const personalMovieDB = {
    count: numberOfFilms,
@@ -16,18 +16,50 @@ const personalMovieDB = {
    privat: false,
 };
 
-for (let i = 0; i < 2; i++) {
-   const nameLastFilm = prompt('Один из последних просмотренных фильмов?', '');
-   const ratingLastFilm = prompt('На сколько оцените его?', '');
-   if (nameLastFilm != null && ratingLastFilm != null && nameLastFilm != '' && ratingLastFilm != '' && nameLastFilm.length < 50) {
-      personalMovieDB.movies[nameLastFilm] = ratingLastFilm;
-   } else {
-      i--;
+function start() {
+   numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+
+   while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+      numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
    }
 }
 
-console.log(personalMovieDB);
-*/
+function rememberMyFilms() {
+   for (let i = 0; i < 2; i++) {
+      const nameLastFilm = prompt('Один из последних просмотренных фильмов?', '');
+      const ratingLastFilm = prompt('На сколько оцените его?', '');
+      if (nameLastFilm != null && ratingLastFilm != null && nameLastFilm != '' && ratingLastFilm != '' && nameLastFilm.length < 50) {
+         personalMovieDB.movies[nameLastFilm] = ratingLastFilm;
+      } else {
+         i--;
+      }
+   }
+}
+
+function showMyDB(filmDataBase) {
+   if (filmDataBase.privat == false) {
+      console.log(filmDataBase);
+   }
+}
+
+function writeYourGenres(filmDataBase) {
+   for (let i = 1; i <= 3; i++) {
+      const genreOfFilm = prompt(`Ваш любимый жанр под номером ${i}`);
+      filmDataBase.genres[i - 1] = genreOfFilm;
+   }
+}
+
+start();
+
+rememberMyFilms();
+
+showMyDB(personalMovieDB);
+
+writeYourGenres(personalMovieDB);
+
+
+
+
 
 //==========================Циклы========================
 //==================Треугольник==========================
@@ -46,7 +78,7 @@ console.log(resultOut);
 */
 
 /*
-//================Метки
+//================Метки====================
 first: for (let i = 0; i < 3; i++) {
    console.log(`First level: ${i}`);
    for (let j = 0; j < 3; j++) {
@@ -60,7 +92,7 @@ first: for (let i = 0; i < 3; i++) {
 */
 
 /*
-//===============Задачи
+//===============Задачи===================
 let i = 5;
 while (i < 11) {
    console.log(i);
