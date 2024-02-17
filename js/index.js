@@ -273,6 +273,7 @@ console.log(getTimeFromMinutes(150));
 console.log(findMaxNumber(1, 8, 3, 5));
 */
 
+/*
 function fib(num) {
    if (typeof (num) !== 'number' || !Number.isInteger(num) || num <= 0) {
       return '';
@@ -289,6 +290,5 @@ function fib(num) {
    return resultStr.slice(0, -1);
 }
 
-
 console.log(fib(7));
-
+*/
