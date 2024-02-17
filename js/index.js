@@ -254,7 +254,8 @@ function getTimeFromMinutes(countMinutes) {
 
    const textHour = Math.floor(countMinutes / 60);
    const textInsertHour = textOptionHour[(textHour % 100 > 4 && textHour % 100 < 20) ? 2 : cases[(textHour % 10 < 5) ? textHour % 10 : 5]];
-   const textMinutes = countMinutes - Math.floor(countMinutes / 60) * 60;
+
+   const textMinutes = countMinutes % 60;
    const textInsertMinute = textOptionMinute[(textMinutes % 100 > 4 && textMinutes % 100 < 20) ? 2 : cases[(textMinutes % 10 < 5) ? textMinutes % 10 : 5]];
 
    return `Это ${Math.floor(countMinutes / 60)} ${textInsertHour} и ${textMinutes} ${textInsertMinute}`;
@@ -271,5 +272,6 @@ console.log(getTimeFromMinutes(150));
 
 console.log(findMaxNumber(1, 8, 3, 5));
 */
+
 
 
