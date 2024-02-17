@@ -273,5 +273,22 @@ console.log(getTimeFromMinutes(150));
 console.log(findMaxNumber(1, 8, 3, 5));
 */
 
+function fib(num) {
+   if (typeof (num) !== 'number' || !Number.isInteger(num) || num <= 0) {
+      return '';
+   }
+   let resultStr = '';
+   let value1 = 0;
+   let value2 = 1;
+   for (let i = 0; i < num; i++) {
+      resultStr += `${value1} `;
+      let sumValue = value1 + value2;
+      value1 = value2;
+      value2 = sumValue;
+   }
+   return resultStr.slice(0, -1);
+}
 
+
+console.log(fib(7));
 
