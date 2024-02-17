@@ -237,3 +237,39 @@ function getCoupeNumber(numberPlace) {
 
 console.log(getCoupeNumber(7.7));
 */
+/*
+function sklonenie(number, txt) {
+   const cases = [2, 0, 1, 1, 1, 2];
+   return txt[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
+}
+*/
+/*
+function getTimeFromMinutes(countMinutes) {
+   if (typeof (countMinutes) !== 'number' || !Number.isInteger(countMinutes) || countMinutes < 0) {
+      return 'Ошибка, проверьте данные';
+   }
+   const cases = [2, 0, 1, 1, 1, 2];
+   const textOptionHour = ['час', 'часа', 'часов'];
+   const textOptionMinute = ['минута', 'минуты', 'минут'];
+
+   const textHour = Math.floor(countMinutes / 60);
+   const textInsertHour = textOptionHour[(textHour % 100 > 4 && textHour % 100 < 20) ? 2 : cases[(textHour % 10 < 5) ? textHour % 10 : 5]];
+   const textMinutes = countMinutes - Math.floor(countMinutes / 60) * 60;
+   const textInsertMinute = textOptionMinute[(textMinutes % 100 > 4 && textMinutes % 100 < 20) ? 2 : cases[(textMinutes % 10 < 5) ? textMinutes % 10 : 5]];
+
+   return `Это ${Math.floor(countMinutes / 60)} ${textInsertHour} и ${textMinutes} ${textInsertMinute}`;
+}
+
+function findMaxNumber(num1, num2, num3, num4) {
+   if (typeof (num1, num2, num3, num4) !== 'number') {
+      return 0;
+   }
+   return Math.max(num1, num2, num3, num4);
+}
+
+console.log(getTimeFromMinutes(150));
+
+console.log(findMaxNumber(1, 8, 3, 5));
+*/
+
+
