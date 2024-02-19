@@ -292,3 +292,45 @@ function fib(num) {
 
 console.log(fib(7));
 */
+
+const personalPlanPeter = {
+   name: 'Peter',
+   age: '29',
+   skills: {
+      languages: ['ru', 'eng'],
+      programmingLangs: {
+         //js: '20%',
+         //php: '10%'
+      },
+      exp: '1 month'
+   },
+   showAgeAndLangs: function (plan) {
+      const { age, skills } = plan;
+      return `Мне ${age} и я владею языками: ${skills.languages.join(' ').toUpperCase()}`;
+   }
+};
+
+function showExperience(plan) {
+   const { skills } = plan;
+   return skills.exp;
+}
+
+function showProgrammingLangs(plan) {
+   const { skills } = plan;
+   let result = '';
+
+   //if (Object.keys(skills.programmingLangs).length === 0) {
+   //return '';
+   //}
+
+   for (let key in skills.programmingLangs) {
+      result += `Язык ${key} изучен на ${skills.programmingLangs[key]}\n`;
+   }
+   return result;
+}
+
+console.log(showExperience(personalPlanPeter));
+
+console.log(showProgrammingLangs(personalPlanPeter));
+
+console.log(personalPlanPeter.showAgeAndLangs(personalPlanPeter));
