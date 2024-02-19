@@ -292,7 +292,7 @@ function fib(num) {
 
 console.log(fib(7));
 */
-
+/*
 const personalPlanPeter = {
    name: 'Peter',
    age: '29',
@@ -330,7 +330,6 @@ function showProgrammingLangs(plan) {
 }
 
 console.log(showExperience(personalPlanPeter));
-
 console.log(showProgrammingLangs(personalPlanPeter));
-
 console.log(personalPlanPeter.showAgeAndLangs(personalPlanPeter));
+*/
