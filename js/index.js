@@ -333,3 +333,24 @@ console.log(showExperience(personalPlanPeter));
 console.log(showProgrammingLangs(personalPlanPeter));
 console.log(personalPlanPeter.showAgeAndLangs(personalPlanPeter));
 */
+/*
+const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+
+function showFamily(arr) {
+   if (arr.length === 0) {
+      return 'Семья пуста';
+   }
+   return `Семья состоит из: ${arr.join(' ')}`;
+}
+
+console.log(showFamily(family));
+
+const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+function standardizeStrings(arr) {
+   arr.forEach(item => {
+      console.log(item.toLowerCase());
+   });
+}
+standardizeStrings(favoriteCities);
+*/
