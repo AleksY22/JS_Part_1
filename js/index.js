@@ -354,3 +354,45 @@ function standardizeStrings(arr) {
 }
 standardizeStrings(favoriteCities);
 */
+/*
+const someString = 'This is some strange string';
+function reverse(str) {
+   if (typeof (str) !== 'string') {
+      return 'Ошибка!';
+   }
+   let result = '';
+   for (let i = str.length - 1; i >= 0; i--) {
+      result += str[i];
+   }
+   return result;
+}
+
+function reverse(str) {
+   if (typeof (str) !== 'string') {
+      return 'Ошибка!';
+   }
+   const strToArr = str.split('');
+   const arrToStr = strToArr.reverse();
+   return arrToStr.join('');
+}
+console.log(reverse(someString));
+
+const baseCurrencies = ['USD', 'EUR'];
+const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+
+function availableCurr(arr, missingCurr) {
+   if (arr.length === 0) {
+      return 'Нет доступных валют';
+   }
+   if (arr.includes(missingCurr)) {
+      const indexItem = arr.indexOf(missingCurr);
+      arr.splice(indexItem, 1);
+   }
+   let result = '';
+   for (let i of arr) {
+      result += i + '\n';
+   }
+   return 'Доступные валюты:' + '\n' + `${result}`;
+}
+console.log(availableCurr([...baseCurrencies, ...additionalCurrencies], 'CNY'));
+*/
