@@ -464,3 +464,16 @@ function transferWaitors(data) {
 console.log(transferWaitors(restorantData));
 console.log(restorantData);
 */
+
+//============Оператор нулевого слияния (??)==========================
+let valHeight = 300;
+let valWidth = 400;
+
+function changeParams(height, width) {
+   const newHeight = `${height ?? 200}`; // если значение null или undefined, то используется второе значение
+   const newWidth = `${width ?? 200}`; // // если значение null или undefined, то используется второе значение
+   return [newHeight, newWidth];
+}
+
+console.log(changeParams(valHeight, valWidth));
+console.log(changeParams());
