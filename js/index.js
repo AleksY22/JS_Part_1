@@ -495,3 +495,22 @@ userData.hey.?(); //undefined
 */
 
 //==============Тип данных Symbol============================
+
+let ip = Symbol('ip');
+
+const obj = {
+   name: 'test',
+   id: 123,
+   [Symbol('id')]: 1, //Скрытое свойство, при переборе не показывает
+   [ip]: 192,
+   getIp: function () {
+      return this[ip];
+   }
+};
+
+console.log(obj);
+console.log(obj['id']);
+console.log(obj[ip]);
+console.log(obj.getIp());
+console.log(obj[Object.getOwnPropertySymbols(obj)[0]]);
+
