@@ -464,7 +464,7 @@ function transferWaitors(data) {
 console.log(transferWaitors(restorantData));
 console.log(restorantData);
 */
-
+/*
 //============Оператор нулевого слияния (??)==========================
 let valHeight = 300;
 let valWidth = 400;
@@ -477,3 +477,21 @@ function changeParams(height, width) {
 
 console.log(changeParams(valHeight, valWidth));
 console.log(changeParams());
+
+//==============Оператор опциональной цепочки (?.)===================
+//const box = document.querySelector('.box');
+//console.log(box?.textContent); //проверяет значение слева от себя и останавливается если значение null или undefined (ошибки не будет)
+
+const userData = {
+   name: 'Ivan',
+   age: null,
+   say: function() {
+      console.log('Hello');
+   }
+};
+
+console.log(userData?.skills?.js); //undefined
+userData.hey.?(); //undefined
+*/
+
+//==============Тип данных Symbol============================
