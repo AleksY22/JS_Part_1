@@ -493,7 +493,7 @@ const userData = {
 console.log(userData?.skills?.js); //undefined
 userData.hey.?(); //undefined
 */
-
+/*
 //==============Тип данных Symbol============================
 
 let ip = Symbol('ip');
@@ -505,7 +505,8 @@ const obj = {
    [ip]: 192,
    getIp: function () {
       return this[ip];
-   }
+   },
+   [Symbol.for('iq')]: 180 //Глобальный реестр символов
 };
 
 console.log(obj);
@@ -513,4 +514,5 @@ console.log(obj['id']);
 console.log(obj[ip]);
 console.log(obj.getIp());
 console.log(obj[Object.getOwnPropertySymbols(obj)[0]]);
-
+console.log(obj[Symbol.for('iq')]);
+*/
