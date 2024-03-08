@@ -516,3 +516,34 @@ console.log(obj.getIp());
 console.log(obj[Object.getOwnPropertySymbols(obj)[0]]);
 console.log(obj[Symbol.for('iq')]);
 */
+/*
+//===============Дескрипторы свойств============================
+const user = {
+   name: 'Alex',
+   surname: 'Smith',
+   birthday: '20/04/1993',
+   showMyPublicData: function () {
+      console.log(`${this.name} ${this.surname}`);
+   }
+};
+//ДЕСКРИПТОРЫ(ФЛАГИ) свойств
+//writable
+//enumerable
+//configurable
+
+console.log(Object.getOwnPropertyDescriptor(user, 'name'));
+
+Object.defineProperty(user, 'name', { writable: false }); //изменение свойства
+
+Object.defineProperty(user, 'gender', { value: 'male' }); //создание нового свойства, все флаги false
+
+//изменение нескольких свойств сразу
+Object.defineProperties(user, {
+   name: { writable: false },
+   surname: { writable: false },
+   showMyPublicData: { enumerable: false }
+});
+*/
+
+
+
