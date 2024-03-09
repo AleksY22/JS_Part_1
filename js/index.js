@@ -544,6 +544,67 @@ Object.defineProperties(user, {
    showMyPublicData: { enumerable: false }
 });
 */
+/*
+//======================Итерируемые объекты==============================
+//итерируемые объекты содержат символ итератора
 
+const user = {
+   name: 'Alex',
+   surname: 'Smith',
+   birthday: '20/04/1993',
+   showMyPublicData: function () {
+      console.log(`${this.name} ${this.surname}`);
+   }
+};
+
+//перебор при помощи for in (перебор по ключу)
+for (const key in user) {
+   console.log(user[key]);
+}
+
+//!!!!!перебор в массивах и строках при помощи for in может идти не попорядку
+
+const arr = ['a', 'b', 'c'];
+
+for (const key in arr) {
+   console.log(arr[key]);
+}
+
+//перебор при помощи for of (перебор по значению) !!!не работает для объектов
+
+for (const key of arr) {
+   console.log(key);
+}
+
+//делаем объект итерабильным (создаем символ со значением итератора)
+
+const salaries = {
+   john: 500,
+   ivan: 1000,
+   ann: 5000,
+   sayHello: function () {
+      console.log('Hello');
+   }
+};
+
+salaries[Symbol.iterator] = function () {
+   return {
+      curent: this.john,
+      last: this.ann,
+      next() {
+         if (this.curent < this.last) {
+            this.curent += 500;
+            return { done: false, value: this.curent };
+         } else {
+            return { done: true };
+         }
+      }
+   };
+};
+
+for (const key of salaries) {
+   console.log(key);
+}
+*/
 
 
