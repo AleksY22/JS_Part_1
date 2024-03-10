@@ -606,5 +606,101 @@ for (const key of salaries) {
    console.log(key);
 }
 */
+/*
+//======================= MAP (Карта)=========================
+//MAP - специфическая структура данных
+//может использоваться для цифровых ключей в объекте 
 
+const shops = [
+   { rice: 500 },
+   { oil: 200 },
+   { bread: 50 }
+];
+
+const myMap = new Map();
+
+//заполнение в ручную
+myMap.set(shops[0], 5000);
+myMap.set(shops[1], 15000);
+myMap.set(shops[2], 25000);
+
+//myMap.set(shops[0], 5000).set(shops[1], 15000).set(shops[2], 25000);
+
+//заполнение программно
+
+const budget = [5000, 15000, 25000];
+
+shops.forEach((shop, i) => {
+   myMap.set(shop, budget[i]);
+});
+
+console.log(myMap);
+
+//получение данных
+console.log(myMap.get(shops[0]));
+//проверка наличия данных
+console.log(myMap.has(shops[0]));
+//удаление данных
+//myMap.delete(shops[0]);
+//очистка мар
+//myMap.clear();
+//размер мар
+//myMap.size;
+
+//создание МАР с начальным значением
+const myShopsMap = new Map([
+   [{ paper: 400 }, 8000]
+]);
+
+shops.forEach((shop, i) => {
+   myShopsMap.set(shop, budget[i]);
+});
+
+console.log(myShopsMap);
+
+//перебор МАР
+// 1. map.keys()
+for (let shop of myShopsMap.keys()) {
+   console.log(shop);
+}
+
+const goods = [];
+for (let shop of myShopsMap.keys()) {
+   goods.push(Object.keys(shop)[0]);
+}
+console.log(goods);
+
+// 2. map.values()
+for (let price of myShopsMap.values()) {
+   console.log(price);
+}
+
+// 3. map.entries()
+for (let [shop, price] of myShopsMap.entries()) {
+   console.log(shop, price);
+}
+
+// 4. map.forEach()
+myShopsMap.forEach((value, key, map) => {
+   console.log(key, value);
+});
+
+//преобразование объекта в карту
+
+const user = {
+   name: 'Alex',
+   surname: 'Smith',
+   birthday: '20/04/1993',
+   showMyPublicData: function () {
+      console.log(`${this.name} ${this.surname}`);
+   }
+};
+
+const userMap = new Map(Object.entries(user));
+console.log(userMap);
+
+//преобразование карты в объект
+const newUserObj = Object.fromEntries(userMap);
+console.log(newUserObj);
+*/
 
