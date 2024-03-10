@@ -638,12 +638,16 @@ console.log(myMap);
 
 //получение данных
 console.log(myMap.get(shops[0]));
+
 //проверка наличия данных
 console.log(myMap.has(shops[0]));
+
 //удаление данных
 //myMap.delete(shops[0]);
+
 //очистка мар
 //myMap.clear();
+
 //размер мар
 //myMap.size;
 
@@ -702,5 +706,49 @@ console.log(userMap);
 //преобразование карты в объект
 const newUserObj = Object.fromEntries(userMap);
 console.log(newUserObj);
+*/
+/*
+//======================= SET =========================
+//SET - особый вид коллекции (массив), где каждое значение встречается однажды
+
+const arr1 = [1, 1, 2, 2, 3, 4, 5, 6, 5];
+const arr2 = ['Aleks', 'Ann', 'Ivan'];
+
+const myNumSet = new Set(arr1);
+const myStrSet = new Set(arr2);
+
+console.log(myNumSet);
+console.log(myStrSet);
+
+//методы SET
+
+// 1.добавление элемента
+myStrSet.add('Jonh');
+
+// 2.удаление элемента
+//set.delete(value);
+
+// 3.проверка наличия данных
+//set.has(value);
+
+// 4.очистка set
+//set.clear();
+
+// 5.размер set
+//set.size;
+
+// 6.перебор данных set
+for (let value of myStrSet) {
+   console.log(value);
+}
+
+myNumSet.forEach((value) => {
+   console.log(value);
+});
+
+//фильтр массива
+function unique(arr) {
+   return Array.from(new Set(arr));
+}
 */
 
