@@ -813,3 +813,29 @@ function isPangram5(string) {
    return (string.match(/([a-z])(?!.*\1)/ig) || []).length === 26;
 }
 */
+/*
+function deepCount(a) {
+   let count = 0;
+   for (let i of a) {
+      count += 1;
+      if (Array.isArray(i)) {
+         let rez = deepCount(i);
+         count += rez;
+      }
+   }
+   return count;
+}
+
+// Вариант с циклом
+function deepCount2(a) {
+   let count = a.length;
+   for (let i = 0; i < a.length; i++) if (Array.isArray(a[i])) count += deepCount2(a[i]);
+   return count;
+}
+
+// Вариант с методом reduce
+function deepCount3(a) {
+   return a.reduce((s, e) => s + (Array.isArray(e) ? deepCount3(e) : 0), a.length);
+}
+*/
+
