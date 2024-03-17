@@ -609,7 +609,7 @@ for (const key of salaries) {
 /*
 //======================= MAP (Карта)=========================
 //MAP - специфическая структура данных
-//может использоваться для цифровых ключей в объекте 
+//может использоваться для цифровых ключей в объекте
 
 const shops = [
    { rice: 500 },
@@ -627,7 +627,6 @@ myMap.set(shops[2], 25000);
 //myMap.set(shops[0], 5000).set(shops[1], 15000).set(shops[2], 25000);
 
 //заполнение программно
-
 const budget = [5000, 15000, 25000];
 
 shops.forEach((shop, i) => {
@@ -707,6 +706,34 @@ console.log(userMap);
 const newUserObj = Object.fromEntries(userMap);
 console.log(newUserObj);
 */
+
+/*
+//====================WeakMap==============================================
+//WeakMap (слабая карта) - ключами могут быть только объекты.
+//Если ссылка на объект существует только в WeakMap, то объект будет удален.
+//доступны 4 метода: set, get, delete, has.
+
+let cache = new WeakMap();
+
+function cacheUser(user) {
+   if (!cache.has(user)) {
+      cache.set(user, Date.now);
+   }
+   return cache.get(user);
+}
+
+let lena = { name: 'Elena' };
+let aleks = { name: 'Aleks' };
+
+cacheUser(lena);
+cacheUser(aleks);
+
+lena = null;
+
+console.log(cache.has(lena)); //false
+*/
+
+
 /*
 //======================= SET =========================
 //SET - особый вид коллекции (массив), где каждое значение встречается однажды
@@ -751,6 +778,28 @@ function unique(arr) {
    return Array.from(new Set(arr));
 }
 */
+
+/*
+//==========================WeakSet=========================
+//Aналогична обычному set, но добавлять в коллекцию можно только объекты.
+//Если ссылка на объект существует только в WeakSet, то объект будет удален.
+//Доступны методы: add, delete, has.
+//Не перебирается.
+
+let messages = [
+   { text: 'Hello', from: 'John' },
+   { text: 'World', from: 'Aleks' },
+   { text: 'Text', from: 'Elena' }
+];
+
+let readMessages = new WeakSet();
+
+readMessages.add(messages[0]);
+messages.shift();
+console.log(readMessages.has(messages[0]));
+*/
+
+
 /*
 //=============================********=============================
 function amountOfPages(summary) {
@@ -838,4 +887,5 @@ function deepCount3(a) {
    return a.reduce((s, e) => s + (Array.isArray(e) ? deepCount3(e) : 0), a.length);
 }
 */
+
 
