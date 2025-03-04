@@ -1,21 +1,20 @@
-'use strict';
+"use strict";
 
 //==========================Циклы========================
 //==================Треугольник==========================
 /*
-let resultOut = '';
+let resultOut = "";
 const lenghtStr = 7;
 
 for (let i = 1; i < lenghtStr; i++) {
-   for (let j = 0; j < i; j++) {
-      resultOut += '*';
-   }
-   resultOut += '\n';
+  for (let j = 0; j < i; j++) {
+    resultOut += "*";
+  }
+  resultOut += "\n";
 }
 
 console.log(resultOut);
 */
-
 /*
 //================Метки====================
 first: for (let i = 0; i < 3; i++) {
@@ -733,7 +732,6 @@ lena = null;
 console.log(cache.has(lena)); //false
 */
 
-
 /*
 //======================= SET =========================
 //SET - особый вид коллекции (массив), где каждое значение встречается однажды
@@ -798,7 +796,6 @@ readMessages.add(messages[0]);
 messages.shift();
 console.log(readMessages.has(messages[0]));
 */
-
 
 /*
 //=============================********=============================
@@ -887,5 +884,3 @@ function deepCount3(a) {
    return a.reduce((s, e) => s + (Array.isArray(e) ? deepCount3(e) : 0), a.length);
 }
 */
-
-
